@@ -1,0 +1,43 @@
+<form action="/trails" method="POST">
+  <div class="field mb-4">
+    <label class="label">Enter Trail</label>
+    <input class="input" type="string" placeholder="Trail Name" name="poi" value="" />
+  </div>
+  <div class="field mb-4">
+    <label class="label">Select Level of experience required</label>
+    <div class="control">
+      <label class="radio">
+        <input type="radio" name="level" value="beginner" />
+        Beginner
+      </label>
+      <label class="radio">
+        <input type="radio" name="level" value="intermediate" />
+        Intermediate
+      </label>
+      <label class="radio">
+        <input type="radio" name="level" value="expert" />
+        Expert
+      </label>
+    </div>
+  </div>
+  <div class="field mb-4">
+    <label class="label">Trektype</label>
+    <div class="control">
+      <div class="select">
+        <select name="trektype">
+            {{#each trektypes}}
+            <option value={{_id}}> {{title}}</option>
+            {{/each}}
+          </select>
+      </div>
+    </div>
+  </div>
+  <div class="field mt-2 mb-4">
+    {{> coordinates}}
+  </div>
+  <div class="field">
+    <div class="control">
+      <button class="button is-success is-fullwidth">Click to add Trail</button>
+    </div>
+  </div>
+</form>

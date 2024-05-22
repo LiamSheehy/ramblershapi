@@ -1,0 +1,28 @@
+<Card title="Current list of Treks ">
+  <table class="table is-fullwidth">
+    <thead>
+      <th>Trektype</th>
+      <th>POI</th>
+      <th>Level</th>
+      <th>Added by</th>
+    </thead>
+    <tbody>
+      {{#each placemarks}}
+      <tr>
+        <td>
+          {{trektype.title}}
+        </td>
+        <td>
+          {{poi}}
+        </td>
+        <td>
+          {{level}}
+        </td>
+        <td>
+          {{member.firstName}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</Card>
